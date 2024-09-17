@@ -1,13 +1,11 @@
-import { FC, HTMLAttributes, ReactNode } from 'react';
-import QText from './QText';
+import { FC, ReactNode } from "react";
+import QText from "./QText";
 
-interface QBadgeProps extends HTMLAttributes<HTMLElement> {
-  children: ReactNode
+interface QBadgeProps {
+  children: ReactNode;
 }
 
-const QBadge: FC<QBadgeProps> = ({
-  children,
-}) => {
+const QBadge: FC<QBadgeProps> = ({ children }) => {
   return (
     <QText
       tag="small"
@@ -15,7 +13,7 @@ const QBadge: FC<QBadgeProps> = ({
       weight="semibold"
       className="px-2 py-1 bg-emerald-200 text-emerald-800 rounded leading-none"
     >
-      { children }
+      {children}
     </QText>
   );
 };

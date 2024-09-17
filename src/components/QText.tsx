@@ -1,45 +1,45 @@
-import { FC, HTMLAttributes, ElementType, ReactNode } from 'react';
-import classNames from 'classnames';
+import { FC, HTMLAttributes, ElementType, ReactNode } from "react";
+import classNames from "classnames";
 
 interface QTextProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
-  color?: 'major' | 'minor';
-  size?: 'xs' | 'sm' | 'md' | 'lg';
+  color?: "major" | "minor";
+  size?: "xs" | "sm" | "md" | "lg";
   tag: ElementType;
-  weight?: 'light' | 'normal' | 'medium' | 'semibold';
+  weight?: "light" | "normal" | "medium" | "semibold";
 }
 
 const QText: FC<QTextProps> = ({
   children,
-  color = 'major',
-  size = 'md',
+  color = "major",
+  size = "md",
   tag: TagName,
-  weight = 'normal',
+  weight = "normal",
   ...rest
 }) => {
   return (
     <TagName
-      className={ classNames([
+      className={classNames([
         {
-          xs: 'text-xs',
-          sm: 'text-sm',
-          md: 'text-base',
-          lg: 'text-lg',
+          xs: "text-xs",
+          sm: "text-sm",
+          md: "text-base",
+          lg: "text-lg",
         }[size],
         {
-          light: 'font-light',
-          normal: 'font-normal',
-          medium: 'font-medium',
-          semibold: 'font-semibold',
+          light: "font-light",
+          normal: "font-normal",
+          medium: "font-medium",
+          semibold: "font-semibold",
         }[weight],
         {
-          major: 'text-zinc-950 ',
-          minor: 'text-zinc-400',
+          major: "text-zinc-950 ",
+          minor: "text-zinc-400",
         }[color],
-      ]) }
-      { ...rest }
+      ])}
+      {...rest}
     >
-      { children }
+      {children}
     </TagName>
   );
 };
