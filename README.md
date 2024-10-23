@@ -80,7 +80,7 @@ Fique à vontade para utilizar CSS puro ou Tailwind, de acordo com sua preferên
 1. Certifique-se de ter o **Node.js** na versão `20.x` ou superior.
 2. Instale as dependências:
    ```bash
-   npm ci
+   npm install
    ```
 3. Inicie o servidor de desenvolvimento:
    ```bash
